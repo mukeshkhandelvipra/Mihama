@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Home – Intelligent Living Solutions</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     TOP BAR
+============================================================ -->
+<div class="top-bar">
+  <div class="container-xl">
+    <div class="row align-items-center">
+      <div class="col-md-6 d-none d-md-flex gap-4 top-contact">
+        <a href="mailto:info@smarthome.com"><i class="fa fa-envelope me-1"></i><span data-en="info@smarthome.com" data-th="info@smarthome.com">info@smarthome.com</span></a>
+        <a href="tel:+18001234567"><i class="fa fa-phone me-1"></i><span data-en="+1 800 123 4567" data-th="+1 800 123 4567">+1 800 123 4567</span></a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end gap-3 align-items-center">
+        <div class="language-switcher">
+          <button class="btn-lang active" data-lang="en" title="English">ENG</button>
+          <span class="lang-divider">/</span>
+          <button class="btn-lang" data-lang="th" title="ไทย">TH</button>
+        </div>
+        <div class="top-social gap-3 d-flex">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR (DESKTOP MEGAMENU)
+============================================================ -->
+<nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#">      
+        <img src="images/logo.svg" alt="Smart Home Logo" width="178" height="70" />
+      
+    </a>
+    <!-- Hamburger Toggle for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#" data-en="Home" data-th="หน้าแรก">Home</a></li>
+        
+        <!-- Pages with Megamenu Submenu -->
+        <li class="nav-item dropdown-hover">
+          <a class="nav-link dropdown-toggle" href="#" data-en="Pages" data-th="หน้าต่างๆ">Pages</a>
+          <ul class="mega-menu list-unstyled">
+            <li><a class="mega-item" href="#about" data-en="About" data-th="เกี่ยวกับ">About</a></li>
+            <li><a class="mega-item" href="#products" data-en="Products" data-th="ผลิตภัณฑ์">Products</a></li>
+            <li><a class="mega-item" href="#team" data-en="Our Team" data-th="ทีมของเรา">Our Team</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact" data-th="ติดต่อ">Contact</a></li>
+        <li class="nav-item ms-2">
+          <button class="btn btn-icon-search" id="searchToggle"><i class="fas fa-search"></i></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     MOBILE OFFCANVAS SIDEBAR MENU
+============================================================ -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel">
+      <span class="brand-icon"><i class="fas fa-home"></i></span>
+      Smart<span style="color:var(--primary)">Home</span>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav gap-2">
+      <li class="nav-item"><a class="nav-link" href="#" data-en="Home" data-th="หน้าแรก">Home</a></li>
+      
+      <!-- Pages with Submenu for Mobile -->
+      <li class="nav-item">
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="nav-link flex-grow-1" data-en="Pages" data-th="หน้าต่างๆ">Pages</a>
+          <button class="btn-submenu-toggle" type="button" data-target="pagesSubmenu">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <ul class="submenu" id="pagesSubmenu">
+          <li><a class="nav-link ps-4" href="#about" data-en="About" data-th="เกี่ยวกับ">About</a></li>
+          <li><a class="nav-link ps-4" href="#products" data-en="Products" data-th="ผลิตภัณฑ์">Products</a></li>
+          <li><a class="nav-link ps-4" href="#team" data-en="Our Team" data-th="ทีมของเรา">Our Team</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact" data-th="ติดต่อ">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-inner">
+    <input type="text" class="search-input" placeholder="Search…" data-en-placeholder="Search…" data-th-placeholder="ค้นหา..." />
+    <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero-section" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="container-xl h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-10" data-aos="fade-up" data-aos-duration="900">
+        <h1 class="hero-title" data-en="Reliable Refrigerant supply backed by global quality standards." data-th="การจัดหาสารทำความเย็นที่เชื่อถือได้ พร้อมมาตรฐานคุณภาพระดับสากล">Reliable Refrigerant supply backed by global quality
+standards.</h1>
+        <p class="hero-sub" data-en="Joint venture between Japan and Thailand, delivering
+high-quality refrigerants and relate solutions with dependable local supply and professional service." 
+data-th="บริษัทร่วมทุนระหว่างประเทศญี่ปุ่นและประเทศไทย มุ่งมั่นนำเสนอสารทำความเย็นคุณภาพสูงและโซลูชันที่เกี่ยวข้อง พร้อมการจัดจำหน่ายในประเทศที่เชื่อถือได้และบริการอย่างมืออาชีพ">Joint venture between Japan and Thailand, delivering
+high-quality refrigerants and relate solutions with dependable local supply and professional service.</p>
+        <div class="d-flex justify-content-center gap-3 mt-4 d-none">
+          <a href="#about" class="btn btn-primary-custom" data-en="Get Started" data-th="เริ่มต้นใช้งาน">Get Started</a>
+          <a href="#cta" class="btn btn-outline-custom" data-en="Learn More" data-th="เรียนรู้เพิ่มเติม">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+ <!-- About Smart Home Section -->
+<section class="about-section bg_1" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>About Smart Home</h2>
+
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Smart Lighting Setup</li>
+                        <li><i class="fas fa-check"></i> Media Room Setup</li>
+                        <li><i class="fas fa-check"></i> Home Theater Setup</li>
+                        <li><i class="fas fa-check"></i> Smart Doorbell Installation</li>
+                        <li><i class="fas fa-check"></i> Smart Thermostat Installation</li>
+                        <li><i class="fas fa-check"></i> Smart Door Lock Installation</li>
+                    </ul>
+
+                    <a href="#" class="about-btn">GET INSPIRED</a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-6 text-center">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b" alt="Smart Home">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

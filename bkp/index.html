@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Home – Intelligent Living Solutions</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     TOP BAR
+============================================================ -->
+<div class="top-bar">
+  <div class="container-xl">
+    <div class="row align-items-center">
+      <div class="col-md-6 d-none d-md-flex gap-4 top-contact">
+        <a href="mailto:info@smarthome.com"><i class="fa fa-envelope me-1"></i>info@smarthome.com</a>
+        <a href="tel:+18001234567"><i class="fa fa-phone me-1"></i>+1 800 123 4567</a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end gap-3 top-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#">
+      <span class="brand-icon"><i class="fas fa-home"></i></span>
+      Smart<span>Home</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#about">About</a></li>
+            <li><a class="dropdown-item" href="#products">Products</a></li>
+            <li><a class="dropdown-item" href="#team">Our Team</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-2">
+          <button class="btn btn-icon-search" id="searchToggle"><i class="fas fa-search"></i></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-inner">
+    <input type="text" class="search-input" placeholder="Search…" />
+    <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+  </div>
+</div>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Smart<span style="color:var(--primary)">Home</span></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav gap-2">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#manage">Manage</a></li>
+      <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+      <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+      <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero-section" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="container-xl h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-duration="900">
+        <p class="hero-sub">Welcome to the future</p>
+        <h1 class="hero-title">Smart Home</h1>
+        <div class="d-flex justify-content-center gap-3 mt-4 d-none">
+          <a href="#about" class="btn btn-primary-custom">Get Started</a>
+          <a href="#cta" class="btn btn-outline-custom">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class=" bg_1" id="Cards">
+  <!-- Floating Feature Cards -->
+  <div class="floating-cards-wrapper">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-md-3 position-relative top100" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="icon-box">
+                <i class="fas fa-home"></i>
+            </div>
+            <h4>Access Control</h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+           <div class="service-card">
+              <div class="icon-box">
+                  <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Security</h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="#">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="col-md-3 position-relative top100" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+              <div class="icon-box">
+                  <i class="fas fa-network-wired"></i>
+              </div>
+              <h4>IT Services</h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="#">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+           <div class="service-card">
+              <div class="icon-box">
+                  <i class="fas fa-video"></i>
+              </div>
+              <h4>Doorbell Camera</h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="#">LEARN MORE</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- About Smart Home Section -->
+<section class="about-section bg_1" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>About Smart Home</h2>
+
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Smart Lighting Setup</li>
+                        <li><i class="fas fa-check"></i> Media Room Setup</li>
+                        <li><i class="fas fa-check"></i> Home Theater Setup</li>
+                        <li><i class="fas fa-check"></i> Smart Doorbell Installation</li>
+                        <li><i class="fas fa-check"></i> Smart Thermostat Installation</li>
+                        <li><i class="fas fa-check"></i> Smart Door Lock Installation</li>
+                    </ul>
+
+                    <a href="#" class="about-btn">GET INSPIRED</a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-6 text-center">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b" alt="Smart Home">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Manage Everything Section -->
+<section class="section-pad manage-section bg-white" id="manage">
+
+    <div class="container">
+
+        <h2 class="text-center manage-title">Manage Everything</h2>
+
+        <div class="row g-4">
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827" alt="">
+                    <div class="overlay">
+                        <h5>Outdoor CCTV</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1580894908361-967195033215" alt="">
+                    <div class="overlay">
+                        <h5>Temperature Controller</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5" alt="">
+                    <div class="overlay">
+                        <h5>Tracking</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="">
+                    <div class="overlay">
+                        <h5>Auto Control</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="">
+                    <div class="overlay">
+                        <h5>Motion Sensor</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="manage-card">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="">
+                    <div class="overlay">
+                        <h5>Heating Plan</h5>
+                        <p>Ut enim ad minim veniam</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION 1
+============================================================ -->
+<section class="cta-section" id="cta">
+  <div class="cta-overlay"></div>
+  <div class="container-xl text-center position-relative" data-aos="fade-up">
+    <p class="section-eyebrow text-white opacity-75">Take Action</p>
+    <h2 class="cta-title">Ready to build a smarter home?</h2>
+    <p class="cta-sub">Join thousands of homeowners who've already made the switch to smart living.</p>
+    <a href="#contact" class="btn btn-cta-white mt-3">GET FREE ESTIMATE <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT + STATS
+============================================================ -->
+<section class="section-pad" id="stats">
+  <div class="container-xl">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="stats-img-wrap">
+          <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=600&q=80" alt="Smart Phone App" class="stats-img" />
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <p class="section-eyebrow">Why Choose Us</p>
+        <h2 class="section-title">About Smart Homes</h2>
+        <p class="text-muted mb-4">Smart home technology seamlessly integrates all your devices, providing comfort, security, and energy efficiency from a single platform. Our expert team ensures a flawless setup tailored to your lifestyle.</p>
+        <div class="row g-4 mt-2">
+          <div class="col-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-box">
+              <h3 class="stat-number">300+</h3>
+              <p class="stat-label">Homes Secured</p>
+            </div>
+          </div>
+          <div class="col-4 text-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-box">
+              <h3 class="stat-number">10+</h3>
+              <p class="stat-label">Years Experience</p>
+            </div>
+          </div>
+          <div class="col-4 text-center" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-box">
+              <h3 class="stat-number">17</h3>
+              <p class="stat-label">Awards Won</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section class="section-pad bg-light-section" id="testimonials">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">Reviews</p>
+      <h2 class="section-title">What People Say?</h2>
+      <p class="section-sub">Hear from homeowners who love their smart setup.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"The installation was smooth and the team was incredibly professional. Our home feels like the future now. Couldn't be happier!"</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Portia Larson" />
+            <div>
+              <h6>Portia Larson</h6>
+              <small>Homeowner, Austin TX</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card featured">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Best investment we've made. The smart locks, cameras, and thermostat work flawlessly together. Support team is always available."</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dan Gerson" />
+            <div>
+              <h6>Dan Gerson</h6>
+              <small>Software Engineer, NYC</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p class="testimonial-text">"Exceptional product quality. My energy bills dropped by 30% in the first month. The app is intuitive and the entire setup took under a day."</p>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Vega Santos" />
+            <div>
+              <h6>Vega Santos</h6>
+              <small>Interior Designer, LA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OUR WORKS – GALLERY
+============================================================ -->
+<section class="section-pad" id="works">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">Portfolio</p>
+      <h2 class="section-title">Our Works</h2>
+      <p class="section-sub">Explore our completed smart home installations across the country.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="50"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80" alt="Work 1" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80" alt="Work 2" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="150"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=500&q=80" alt="Work 3" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=500&q=80" alt="Work 4" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="250"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80" alt="Work 5" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+      <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&q=80" alt="Work 6" /><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div></div>
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="#" class="btn btn-outline-primary-custom">VIEW MORE <i class="fas fa-arrow-right ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER – KITCHEN / PARALLAX
+============================================================ -->
+<section class="parallax-section" id="parallax">
+  <div class="parallax-overlay"></div>
+  <div class="container-xl text-center position-relative" data-aos="fade-up">
+    <p class="section-eyebrow text-white opacity-75">Seamless Connectivity</p>
+    <h2 class="parallax-title">All devices sync together at your home</h2>
+    <p class="parallax-sub">One app. Every device. Complete harmony throughout your entire home.</p>
+    <a href="#products" class="btn btn-cta-white mt-3">LEARN MORE <i class="fas fa-chevron-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS / DEVICES
+============================================================ -->
+<section class="section-pad bg-light-section" id="products">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">Devices</p>
+      <h2 class="section-title">Your Home's All-in-One Display Hub</h2>
+      <p class="section-sub">Premium smart home devices engineered for reliability and simplicity.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1543512214-318c7553f230?w=500&q=80" alt="Google Assistant" />
+            <span class="product-badge">Popular</span>
+          </div>
+          <div class="product-body">
+            <h5>Google Assistant</h5>
+            <p class="text-muted small">Smart voice-controlled hub for your home</p>
+            <div class="product-footer">
+              <span class="product-price">$99.00</span>
+              <a href="#" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=500&q=80" alt="Chromecast" />
+          </div>
+          <div class="product-body">
+            <h5>Chromecast Built-in</h5>
+            <p class="text-muted small">Stream media seamlessly to any display</p>
+            <div class="product-footer">
+              <span class="product-price">$49.00</span>
+              <a href="#" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&q=80" alt="Smart Lock" />
+          </div>
+          <div class="product-body">
+            <h5>Smart Locks</h5>
+            <p class="text-muted small">Keyless entry with biometric security</p>
+            <div class="product-footer">
+              <span class="product-price">$179.00</span>
+              <a href="#" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OUR TEAM
+============================================================ -->
+<section class="section-pad" id="team">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">The People</p>
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-sub">Meet the experts behind your smart home transformation.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-3 col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Bob Grant" />
+            <div class="team-socials">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <h6 class="team-name">Bob Grant</h6>
+          <p class="team-role">Lead Engineer</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mary Smith" />
+            <div class="team-socials">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <h6 class="team-name">Mary Smith</h6>
+          <p class="team-role">UX Designer</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Alex Clark" />
+            <div class="team-socials">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <h6 class="team-name">Alex Clark</h6>
+          <p class="team-role">IoT Specialist</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="#" class="btn btn-outline-primary-custom">View All Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ SECTION
+============================================================ -->
+<section class="section-pad bg-light-section" id="faq">
+  <div class="container-xl">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5" data-aos="fade-right">
+        <p class="section-eyebrow">Help Center</p>
+        <h2 class="section-title">Facts &amp; Questions</h2>
+        <p class="text-muted">Have questions? We have answers. Explore our frequently asked questions below.</p>
+        <a href="#contact" class="btn btn-primary-custom mt-3">Contact Us</a>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="accordion custom-accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                What are the benefits of a smart home?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Smart homes offer enhanced security, energy savings, convenience, and remote control of all devices. Studies show smart home users save up to 30% on energy bills annually while enjoying unprecedented comfort.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                How much does installation cost?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Installation costs vary based on the size of your home and devices chosen. We offer customized packages starting from $499 for basic setups to comprehensive whole-home solutions. Get a free estimate today!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                What does maintenance involve?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Our smart home systems are largely self-maintaining. We provide OTA (over-the-air) software updates and a dedicated support line. Annual on-site checkups are included in our premium service plans.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                How secure is smart home technology?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">We use end-to-end encryption, two-factor authentication, and regular security audits. All devices meet NIST cybersecurity standards. Your data stays on your private network — we never sell or share it.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section class="section-pad" id="contact">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">We Are Here to Help</h2>
+      <p class="section-sub">Have a question or ready to get started? Drop us a message.</p>
+    </div>
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <form class="contact-form">
+          <div class="mb-4">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control custom-input" placeholder="John Doe" />
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control custom-input" placeholder="john@example.com" />
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control custom-input" placeholder="+1 800 000 0000" />
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Message</label>
+            <textarea class="form-control custom-input" rows="5" placeholder="Tell us about your project…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary-custom w-100">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+        </form>
+      </div>
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <div class="contact-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Smart Tablet" class="contact-img" />
+        </div>
+        <div class="contact-info mt-4 d-flex flex-column gap-3 text-start">
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Smart Ave, Silicon Valley, CA 94025</span>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <span>+1 800 123 4567</span>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@smarthome.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GOOGLE MAP
+============================================================ -->
+<div class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.332!2d-122.084!3d37.422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDI1JzE5LjIiTiAxMjLCsDA1JzAyLjQiVw!5e0!3m2!1sen!2sus!4v1616951433612!5m2!1sen!2sus"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<!-- Footer Section -->
+<footer class="footer-section">
+
+    <div class="container">
+
+        <!-- Top CTA -->
+        <div class="row align-items-center footer-top">
+            <div class="col-lg-8">
+                <h2>Ready to get started?</h2>
+                <p>Let’s talk about creating your competitive advantage.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="#" class="cta-btn">TALK TO AN EXPERT</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Main Footer -->
+        <div class="row footer-main">
+
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-logo mb-3">
+                    <h4>SMART HOME</h4>
+                </div>
+                <p>We offer fully customizable solutions that cater to individual needs.</p>
+
+                <p class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    7507 Dewey Route, East Darryville,<br>
+                    ME 36932, United States
+                </p>
+
+                <a href="#" class="map-link">show on map</a>
+
+                <div class="social-icons mt-3">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Need help?</h4>
+
+                <p class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    +1-800-123-4567
+                </p>
+
+                <p>
+                    Monday – Friday: 9:00–20:00<br>
+                    Saturday: 11:00 – 15:00
+                </p>
+
+                <hr>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    smarthome@support.com
+                </p>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Company</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Areas We Serve</a></li>
+                    <li><a href="#">Brands</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom text-center">
+        This website was created with Nicepage
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
