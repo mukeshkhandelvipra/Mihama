@@ -128,39 +128,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── 6. COUNTER ANIMATION ───────────────────────────── */
-  const counters = document.querySelectorAll('.stat-number');
-  const speed = 1800; // ms
+const counters = document.querySelectorAll('.counter');
 
-  const runCounter = (el) => {
-    const text = el.innerText;
-    const suffix = text.replace(/[0-9]/g, '');
-    const target = parseInt(text.replace(/\D/g, ''), 10);
-    let start = 0;
-    const step = target / (speed / 16);
+const startCounter = (entry, observer) => {
+    if (!entry.isIntersecting) return;
 
-    const update = () => {
-      start += step;
-      if (start < target) {
-        el.innerText = Math.ceil(start) + suffix;
-        requestAnimationFrame(update);
-      } else {
-        el.innerText = target + suffix;
-      }
-    };
-    update();
-  };
+    counters.forEach(counter => {
 
-  // Intersection Observer for counters
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        runCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / 200;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = target + (target >= 100 ? "+" : "");
+            }
+        };
+
+        updateCount();
     });
-  }, { threshold: 0.5 });
 
-  counters.forEach(c => counterObserver.observe(c));
+    observer.disconnect();
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => startCounter(entry, observer));
+});
+
+observer.observe(document.querySelector('.counter'));
+
 
   /* ── 7. CONTACT FORM SUBMIT (demo) ──────────────────── */
   const contactForm = document.querySelector('.contact-form');
@@ -178,16 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   });
 
-  /* ── 8. NEWSLETTER FORM (demo) ──────────────────────── */
-  const nlForm = document.querySelector('.footer-newsletter');
-  nlForm?.querySelector('button')?.addEventListener('click', () => {
-    const input = nlForm.querySelector('input');
-    if (input.value) {
-      input.value = '✓ Subscribed!';
-      input.style.color = '#4ade80';
-      setTimeout(() => { input.value = ''; input.style.color = ''; }, 2500);
-    }
-  });
+
+  
 
   /* ── 9. PARALLAX MOUSE TILT (hero only) ─────────────── */
   const hero = document.querySelector('.hero-section');
