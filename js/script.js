@@ -162,31 +162,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 observer.observe(document.querySelector('.counter'));
 
 
-  /* ── 7. CONTACT FORM SUBMIT (demo) ──────────────────── */
-  const contactForm = document.querySelector('.contact-form');
-  contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
-    btn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
-    btn.style.background = '#10b981';
-    btn.style.borderColor = '#10b981';
-    setTimeout(() => {
-      btn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      contactForm.reset();
-    }, 3000);
-  });
-
-
-  
-
-  /* ── 9. PARALLAX MOUSE TILT (hero only) ─────────────── */
-  const hero = document.querySelector('.hero-section');
-  hero?.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 12;
-    const y = (e.clientY / window.innerHeight - 0.5) * 8;
-    hero.style.backgroundPosition = `calc(50% + ${x}px) calc(50% + ${y}px)`;
-  });
-
 });
+
+
+

@@ -18,21 +18,25 @@
 </head>
 <body>
 
-<!-- ============================================================
-     TOP BAR
-============================================================ -->
 <div class="top-bar">
   <div class="container-xl">
     <div class="row align-items-center">
       <div class="col-md-6 d-none d-md-flex gap-4 top-contact">
-        <a href="mailto:info@smarthome.com"><i class="fa fa-envelope me-1"></i><span data-en="info@smarthome.com" data-th="info@smarthome.com">info@smarthome.com</span></a>
-        <a href="tel:+18001234567"><i class="fa fa-phone me-1"></i><span data-en="+1 800 123 4567" data-th="+1 800 123 4567">+1 800 123 4567</span></a>
+              <a href="mailto:mac-sales@mihama.com"><i class="fa fa-envelope me-1"></i><span data-en="mac-sales@mihama.com" data-th="mac-sales@mihama.com">mac-sales@mihama.com</span></a>
+        <a href="tel:+18001234567"><i class="fa fa-phone me-1"></i><span data-en="(+66) 2 3814559" data-th="(+66) 2 3814559">(+66) 2 3814559</span></a>
       </div>
       <div class="col-md-6 d-flex justify-content-end gap-3 align-items-center">
         <div class="language-switcher">
-          <button class="btn-lang active" data-lang="en" title="English">ENG</button>
+          <button class="btn-lang active" data-lang="en" title="English">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="flag-icon">
+            ENG
+          </button>
+
           <span class="lang-divider">/</span>
-          <button class="btn-lang" data-lang="th" title="ไทย">TH</button>
+          <button class="btn-lang" data-lang="th" title="ไทย">
+            <img src="https://flagcdn.com/w40/th.png" alt="Thai Flag" class="flag-icon">
+            TH
+          </button>
         </div>
         <div class="top-social gap-3 d-flex">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -44,10 +48,6 @@
     </div>
   </div>
 </div>
-
-<!-- ============================================================
-     NAVBAR (DESKTOP MEGAMENU)
-============================================================ -->
 <nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
   <div class="container-xl">
     <a class="navbar-brand" href="#">      
@@ -82,14 +82,10 @@
   </div>
 </nav>
 
-<!-- ============================================================
-     MOBILE OFFCANVAS SIDEBAR MENU
-============================================================ -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+<div class="offcanvas offcanvas-start d-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="mobileMenuLabel">
-      <span class="brand-icon"><i class="fas fa-home"></i></span>
-      Smart<span style="color:var(--primary)">Home</span>
+       <img src="images/logo.svg" alt="Smart Home Logo" width="138"  />
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -431,7 +427,7 @@
                 <p>Let’s talk about creating your competitive advantage.</p>
             </div>
             <div class="col-lg-5 text-lg-start" data-aos="zoom-in-up" data-aos-duration="900">
-                <a href="#" class="cta-btn">TALK TO AN EXPERT</a>
+                <a href="#" class="cta-btn text-white">TALK TO AN EXPERT</a>
             </div>
         </div>
 
@@ -443,30 +439,40 @@
                 <div class="footer-logo mb-3">
                    <img src="images/logo_Wh.svg" alt="Logo" width="178" height="70">
                 </div>
-                <p>We offer fully customizable solutions that cater to individual needs.</p>
+                <p>MAC Bangkok Office Mihama Araya Company</p>
 
-                <p class="address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    7507 Dewey Route, East Darryville,<br>
-                    ME 36932, United States
+                <div class="d-flex align-items-start gap-2 ">
+                  <i class="fas fa-map-marker-alt mt-2"></i>
+              <div class="">
+                  <p class="address" data-en="Room 1701, 17th Floor, Bangkok Business Centre (BBC)" data-th="ห้อง 1701 ชั้น 17 อาคารบางกอก บิสสิเนส เซ็นเตอร์ (BBC)">
+                    
+                    Room 1701, 17th Floor, Bangkok<br>
+                    Business Centre (BBC) 
                 </p>
+                 <p class="address" data-en="29 Soi Sukhumvit 63 (Ekamai Road), Khlong Tan Nua, Wattana , Bangkok 10110" data-th="29 ซอยสุขุมวิท 63 (ถนนเอกมัย), คลองตันเหนือ, วัฒนา, กรุงเทพฯ 10110">
+                  29 Soi Sukhumvit 63 (Ekamai Road), Khlong Tan<br>
+                    Nua, Wattana , Bangkok 10110
+                </p>
+              </div>
+                </div>
+               
 
-                <a href="#" class="map-link">show on map</a>
+                <a href="#" class="map-link">Show on map</a>
 
                 <div class="social-icons mt-3">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-x-twitter"></i>
-                    <i class="fab fa-instagram"></i>
+                    <a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <!-- Column 2 -->
-            <div class="col-lg-4 col-md-6 mb-4 pe-md-5">
+            <div class="col-lg-4 col-md-6 mb-4 px-md-5">
                 <h4>Need help?</h4>
 
                 <span class="phone">
                     <i class="fas fa-phone-alt"></i>
-                    <a href="tel:+1-800-123-4567">+1-800-123-4567</a>
+                    <a href="tel:(+66) 2 3814559">(+66) 2 3814559</a>
                 </span>
 
                 <p class="mt-4 color-1">
@@ -478,7 +484,7 @@
 
                 <p>
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:smarthome@support.com" title="smarthome@support.com">smarthome@support.com</a>
+                    <a href="mailto:mac-sales@mihama.com" title="mac-sales@mihama.com">mac-sales@mihama.com</a>
                 </p>
             </div>
 
