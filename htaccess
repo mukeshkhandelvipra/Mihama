@@ -1,0 +1,13 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+
+RewriteBase /
+
+# internally map extensionless URL to .php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([^/]+)/?$ blog-details.php?slug=$1 [L,QSA]

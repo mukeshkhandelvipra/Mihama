@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Establish credibility, introduce identity and JV story, and support customer/OEM outreach</title>
+      <!-- Bootstrap 5 -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+      <!-- AOS -->
+      <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <div class="top-bar">
+         <div class="container-xl">
+            <div class="row align-items-center">
+               <div class="col-md-6 d-none d-md-flex gap-4 top-contact">
+                  <a href="mailto:mac-sales@mihama.com"><i class="fa fa-envelope me-1"></i><span data-th="mac-sales@mihama.com">mac-sales@mihama.com</span></a>
+                  <a href="tel:+18001234567"><i class="fa fa-phone me-1"></i><span data-th="(+66) 2 3814559">(+66) 2 3814559</span></a>
+               </div>
+               <div class="col-md-6 d-flex justify-content-end gap-3 align-items-center">
+                  <div class="language-switcher">
+                     <button class="btn-lang active" data-lang="en" title="English">
+                     <img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="flag-icon">
+                     ENG
+                     </button>
+                     <span class="lang-divider">/</span>
+                     <button class="btn-lang" data-lang="th" title="ไทย">
+                     <img src="https://flagcdn.com/w40/th.png" alt="Thai Flag" class="flag-icon">
+                     TH
+                     </button>
+                  </div>
+                  <div class="top-social gap-3 d-flex">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
+         <div class="container-xl">
+            <a class="navbar-brand" href="index.html">      
+            <img src="images/logo.svg" alt="Smart Home Logo" width="178" height="70" />
+            </a>
+            <!-- Hamburger Toggle for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav align-items-center gap-1">
+                  <li class="nav-item"><a class="nav-link" href="index.html" data-th="หน้าแรก">Home</a></li>
+                  <!-- Pages with Megamenu Submenu -->
+                  <li class="nav-item dropdown-hover">
+                     <a class="nav-link dropdown-toggle1" href="about-us.html" data-th="เกี่ยวกับ ">About Us</a>
+                     <ul class="mega-menu list-unstyled d-none">
+                        <li><a class="mega-item" href="#" data-th="ทีมของเรา">Our Team</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link active" href="products.html" data-th="ผลิตภัณฑ์">Products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html" data-th="บริการ">Service</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html" data-th="ติดต่อ">Contact</a></li>
+                  <li class="nav-item ms-2">
+                     <button class="btn btn-icon-search" id="searchToggle"><i class="fas fa-search"></i></button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="offcanvas offcanvas-start " tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+         <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">
+               <img src="images/logo.svg" alt="Smart Home Logo" width="138"  />
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <ul class="navbar-nav gap-2">
+               <li class="nav-item"><a class="nav-link" href="index.html" data-th="หน้าแรก">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="about-us.html" data-th="เกี่ยวกับเรา">About Us</a></li>
+               <!-- Pages with Submenu for Mobile -->
+               <li class="nav-item d-none">
+                  <div class="d-flex justify-content-between align-items-center">
+                     <a class="nav-link flex-grow-1" data-th="เกี่ยวกับ">About</a>
+                     <button class="btn-submenu-toggle" type="button" data-target="pagesSubmenu">
+                     <i class="fas fa-chevron-right"></i>
+                     </button>
+                  </div>
+                  <ul class="submenu" id="pagesSubmenu">
+                     <li><a class="nav-link ps-4" href="about-us.html" data-th="เกี่ยวกับเรา">About Us</a></li>
+                     <li><a class="nav-link ps-4" href="#" data-th="ทีมของเรา">Our Team</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item"><a class="nav-link active" href="products.html" data-th="ผลิตภัณฑ์">Products</a></li>
+               <li class="nav-item"><a class="nav-link" href="services.html" data-th="บริการ">Service</a></li>
+               <li class="nav-item"><a class="nav-link" href="contact.html" data-th="ติดต่อ">Contact</a></li>
+            </ul>
+         </div>
+      </div>
+      <!-- Search Overlay -->
+      <div class="search-overlay" id="searchOverlay">
+         <div class="search-inner">
+            <input type="text" class="search-input" placeholder="Search…" data-th-placeholder="ค้นหา..." />
+            <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+         </div>
+      </div>
+      <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+      <section class="hero-section" id="hero">
+         <div class="hero-overlay"></div>
+         <div class="container-xl h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+               <div class="col-lg-10" data-aos="zoom-in-down" data-aos-duration="900">
+                  <h1 class="hero-titleinnter" data-en="Products" data-th="ผลิตภัณฑ์">
+                     Products
+                  </h1>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="about-section pt-0 margintopminus">
+         <div class="container">
+            <div class="row g-4">
+               <!-- Left Image -->
+               <div class="col-lg-5">
+                  <div class="about-img bor-50 fade-right"data-aos="roll-right"data-aos-duration="1000">
+                     <img src="images/products-overview.jpg" alt="about-us" class="img-fluid">
+                  </div>
+               </div>
+               <div class="col-lg-7">
+                  <div class="products-content h-100 text-center" data-aos="fade-up" data-aos-duration="900">
+                     <h2 class="pb-2 text-center" data-th="ภาพรวมผลิตภัณฑ์">Products Overview</h2>
+                     <p class="" data-th="
+                        ธุรกิจหลักของ MAC คือการจัดจำหน่ายสารทำความเย็น (Refrigerants) โดยมุ่งมั่นสนับสนุนลูกค้าในประเทศไทยด้วยการจัดหาสินค้าที่มีความพร้อมใช้งานอย่างต่อเนื่อง พร้อมระบบบริหารจัดการการจัดส่งที่มีประสิทธิภาพและเป็นมืออาชีพ
+                        กลุ่มผลิตภัณฑ์ของ MAC ครอบคลุมทั้งสารทำความเย็นที่ได้รับความนิยมในปัจจุบัน รวมถึงสารทำความเย็นเทคโนโลยีใหม่ที่เป็นมิตรต่อสิ่งแวดล้อม โดยได้รับการสนับสนุนจากเครือข่ายโลจิสติกส์ที่เชื่อถือได้และศักยภาพด้านการจัดหาสินค้าระดับสากล
+                        นอกจากนี้ MAC ยังนำเสนอโซลูชันด้าน HVAC และผลิตภัณฑ์อุตสาหกรรมที่เกี่ยวข้อง เพื่อตอบสนองความต้องการทางธุรกิจของลูกค้าอย่างครบวงจร ด้วยมาตรฐานคุณภาพระดับสากลและการบริการที่เชื่อถือได้">
+                        MAC’s core business is the <strong>supply of refrigerants</strong>,
+                        supporting customers in Thailand with stable availability
+                        and professional supply management.
+                        Our product portfolio includes both <strong>widely used and
+                        next-generation refrigerants</strong>, supported by reliable
+                        logistics and global sourcing capability.
+                        In addition, MAC provides related HVAC and industrial
+                        product solutions to meet broader customer
+                        requirements.
+                     </p>
+                     <div class="row text-center counter-box mt-2">
+                        <div class="col-4">
+                           <div class="counter-number counter" data-target="300">0</div>
+                           <div class="counter-text" data-en="HAPPY CLIENTS" data-th="ลูกค้าที่พึงพอใจ">HAPPY CLIENTS</div>
+                        </div>
+                        <div class="col-4">
+                           <div class="counter-number counter" data-target="10">0</div>
+                           <div class="counter-text" data-en="YEARS OF EXPERIENCE" data-th="ปีของประสบการณ์">YEARS OF EXPERIENCE</div>
+                        </div>
+                        <div class="col-4">
+                           <div class="counter-number counter" data-target="17">0</div>
+                           <div class="counter-text" data-en="AWARDS" data-th="รางวัล">AWARDS</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="manage-section bg-white pb-5" id="manage">
+         <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="400" class="text-center manage-title" data-th="">Refrigerants</h2>
+            <p data-aos="fade-up" data-aos-duration="900" data-th="" class="text-center">MAC supplies a broad range of widely used and
+               next-generation refrigerants.
+            </p>
+            <div class="row pt-4">
+               <div class="manage-slider">
+                  <!-- Card -->
+                  <div class="manage-card" data-aos="fade-up" data-aos-duration="300">
+                     <img src="images/r-12.jpg" alt="about-us" class="img-fluid">
+                     <div class="overlay">
+                        <h5 data-th="R22">R22 </h5>
+                        <p data-th="ระบบดั้งเดิมและการบริการหลังการขาย">Legacy systems and aftermarket servicing</p>
+                     </div>
+                  </div>
+                  <div class="manage-card" data-aos="fade-up" data-aos-duration="600">
+                     <img src="images/r-32.jpg" alt="about-us" class="img-fluid">
+                     <div class="overlay">
+                        <h5 data-th="R32">R32</h5>
+                        <p data-th=" ">Modern air-conditioning applications</p>
+                     </div>
+                  </div>
+                  <div class="manage-card" data-aos="fade-up" data-aos-duration="900">
+                     <img src="images/r-134a.jpg" alt="about-us" class="img-fluid">
+                     <div class="overlay">
+                        <h5 data-th="R134a">R134a</h5>
+                        <p data-th="ระบบรถยนต์และการ refrigeration ทางการค้า">Automotive and commercial refrigeration</p>
+                     </div>
+                  </div>
+                  <div class="manage-card" data-aos="fade-up" data-aos-duration="1200">
+                     <img src="images/hfo-refri.jpg" alt="about-us" class="img-fluid">
+                     <div class="overlay">
+                        <h5 data-th="HFO Refrigerants">HFO Refrigerants</h5>
+                        <p data-th="โซลูชัน Low-GWP สนับสนุนความยั่งยืน">Low-GWP solutions supporting sustainability</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p data-th="ข้อมูลเพิ่มเติมเกี่ยวกับสารทำความเย็นสามารถขอได้ตามความต้องการ" class="text-center mt-3" data-aos="fade-up" data-aos-duration="900">
+               <i>
+               Additional refrigerants are available upon request.
+               </i>
+            </p>
+         </div>
+      </section>
+      <section class="relatedproduct d-flex align-items-center text-center">
+         <div class="container">
+            <h2 class="text-white mb-4" data-th="ภูมิหลังของเราและการร่วมทุน" data-aos="fade-up" data-aos-duration="300"> 
+               Related Product Solutions
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="600" data-th="นอกเหนือจากสารทำความเย็นแล้ว MAC ยังสนับสนุนความต้องการของลูกค้าผ่านโซลูชันผลิตภัณฑ์ HVAC และอุตสาหกรรมที่เกี่ยวข้อง ซึ่งจัดหาโดยพันธมิตรระดับโลกที่เชื่อถือได้">
+               In addition to refrigerants, MAC supports customer needs
+               through <strong>related HVAC and industrial <br> product
+               solutions</strong>, sourced via <strong>trusted global partners</strong>.
+            </p>
+            <p data-aos="fade-up" data-aos-duration="900" data-th="โซลูชันผลิตภัณฑ์ที่เกี่ยวข้องของเรารวมถึง:">
+               <strong>Specialty chemicals</strong> for HVAC and industrial
+               applications
+            </p>
+            <p data-aos="fade-up" data-aos-duration="1200" data-th="ฟิลเตอร์อากาศสำหรับอุปกรณ์ HVAC และสภาพแวดล้อมที่ควบคุมได้">
+               <strong>Air filters</strong> for HVAC equipment and controlled
+               environments
+            </p>
+            <p data-aos="fade-up" data-aos-duration="1500" data-th="ผลิตภัณฑ์การบำบัดน้ำสำหรับหม้อไอน้ำ เครื่องปรับอากาศ และระบบน้ำอุตสาหกรรม">
+               <strong>Water-treatment products</strong> for boiler, chiller, and
+               industrial water systems
+            </p>
+            <a data-aos="fade-up" data-aos-duration="1800" href="#" class="btn hero-btn" data-th="เรียนรู้เพิ่มเติม">LEARN MORE</a>
+         </div>
+      </section>
+      <section class="cta-section py-5">
+         <div class="container">
+            <div class="cta-box align-items-center banner-2">
+               <div class="content">
+                  <h2 class="text-white" data-aos="fade-up" data-aos-duration="300" data-th="คุณภาพและความเป็นไปได้">Quality & Compliance</h2>
+                  <p class="text-white" data-aos="fade-up" data-aos-duration="600" data-th="ผลิตภัณฑ์ทั้งหมดที่จัดหาโดย MAC ถูกจัดหา จัดการ และแจกจ่ายตามกฎหมาย ข้อกำหนดด้านความปลอดภัย และความต้องการของตลาด">
+                     All products supplied by MAC are sourced, handled, and
+                     distributed in accordance with 
+                     <strong>applicable regulations,
+                     safety standards, and market requirements.</strong> 
+                  </p>
+                  <a data-aos="fade-up" data-aos-duration="900" href="contact.html" class="btn hero-btn mt-2" data-th="ติดต่อเรา">Contact Us!</a>
+               </div>
+               <div class="robot-wrap" data-aos="fade-up" data-aos-duration="900">
+                  <img src="images/apisupport.svg" alt="about-us" class="img-fluid">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="team-section my-5" >
+         <div class="container">
+            <div class="wrapper">
+               <div class="bg-lines"></div>
+               <div class="" data-aos="fade-up" data-aos-duration="900">
+                  <div class="tag" data-th="Product Inquiry CTA">Product Inquiry CTA</div>
+                  <h2 data-th="กรุณาติดต่อ MAC เพื่อพูดคุยเกี่ยวกับความต้องการของคุณ">Please contact MAC<br>to discuss your <span>requirements</span></h2>
+                  <div class="divider"></div>
+                  <p class="desc" data-th="สำหรับข้อมูลเฉพาะเจาะจง ความพร้อมใช้งาน หรือตัวเลือกการบรรจุภัณฑ์ หรือสอบถามเกี่ยวกับการจัดหา ทีมงานของเราพร้อมที่จะช่วยเหลือคุณในทุกสิ่งที่คุณต้องการ">
+                     For detailed <strong>specifications</strong>, availability, <strong>packaging options</strong>,
+                     or sourcing inquiries — our team is ready to assist you with everything you need.
+                  </p>
+                  <div class="pills d-none">
+                     <div class="pill"><span class="pill-dot"></span>Specifications</div>
+                     <div class="pill"><span class="pill-dot"></span>Availability</div>
+                     <div class="pill"><span class="pill-dot"></span>Packaging Options</div>
+                     <div class="pill"><span class="pill-dot"></span>Sourcing Inquiries</div>
+                  </div>
+                  <div class="cta-row">
+                     <a href="mailto:mac-sales@mihama.com" class="btn-primary">
+                     Send an Inquiry
+                     <span class="btn-arrow">→</span>
+                     </a>
+                     <a href="contact.html" class="btn-secondary" data-th="">
+                     Contact MAC
+                     </a>
+                  </div>
+                  <div class="bg-number">01</div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <p class="pt-4"></p>
+      <footer class="footer-section">
+         <div class="container">
+            <!-- Main Footer -->
+            <div class="row footer-main">
+               <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="footer-logo mb-3">
+                     <img src="images/logo_Wh.svg" alt="Logo" width="178" height="70">
+                  </div>
+                  <p data-th="MAC Bangkok Office Mihama Araya Company">MAC Bangkok Office Mihama Araya Company</p>
+                  <div class="d-flex align-items-start gap-2 ">
+                     <i class="fas fa-map-marker-alt mt-2"></i>
+                     <div class="">
+                        <p class="address" data-th="ห้อง 1701 ชั้น 17 อาคารบางกอก บิสสิเนส เซ็นเตอร์ (BBC)">
+                           Room 1701, 17th Floor, Bangkok<br>
+                           Business Centre (BBC) 
+                        </p>
+                        <p class="address" data-th="29 ซอยสุขุมวิท 63 (ถนนเอกมัย), คลองตันเหนือ, วัฒนา, กรุงเทพฯ 10110">
+                           29 Soi Sukhumvit 63 (Ekamai Road), Khlong Tan<br>
+                           Nua, Wattana , Bangkok 10110
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Column 2 -->
+               <div class="col-lg-4 col-md-6 mb-4 ps-md-5">
+                  <h4 data-th="ต้องการความช่วยเหลือ?">Need help?</h4>
+                  <span class="phone">
+                  <i class="fas fa-phone-alt"></i>
+                  <a href="tel:(+66) 2 3814559">(+66) 2 3814559</a>
+                  </span>
+                  <p class="phone">
+                     <i class="fas fa-envelope"></i>
+                     <a href="mailto:mac-sales@mihama.com" title="mac-sales@mihama.com">mac-sales@mihama.com</a>
+                  </p>
+                  <a href="#" class="map-link">Show on map</a>
+                  <div class="social-icons mt-3">
+                     <a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#" title="twitter"><i class="fab fa-x-twitter"></i></a>
+                     <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+               <!-- Column 3 -->
+               <div class="col-lg-4 col-md-6 mb-4  ps-md-5">
+                  <h4 data-th="ลิงก์ด่วน">Quick Links</h4>
+                  <ul class="footer-links">
+                     <li><a href="index.html" data-th="หน้าแรก">Home</a>  
+                     <li><a href="about-us.html" data-th="เกี่ยวกับเรา">About Us</a> 
+                     <li><a href="products.html" data-th="ผลิตภัณฑ์"  >Product</a> 
+                     <li><a href="services.html" data-th="บริการ">Service</a> 
+                     <li><a href="contact.html" data-th="ติดต่อ">Contact</a>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <script src="js/script.js"></script>
+      <script>
+         $('.manage-slider').slick({
+             slidesToShow: 4,   // ✅ Default 4
+             slidesToScroll: 1,
+             infinite: true,
+             autoplay: true,
+             autoplaySpeed: 2500,
+             arrows: true,
+             dots: false,
+         
+             responsive: [
+                 {
+                     breakpoint: 1200,
+                     settings: {
+                         slidesToShow: 3
+                     }
+                 },
+                 {
+                     breakpoint: 992,
+                     settings: {
+                         slidesToShow: 2
+                     }
+                 },
+                 {
+                     breakpoint: 576,
+                     settings: {
+                         slidesToShow: 1
+                     }
+                 }
+             ]
+         });
+      </script>
+   </body>
+</html>

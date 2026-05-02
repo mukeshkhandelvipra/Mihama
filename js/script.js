@@ -10,17 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const switchLanguage = (lang) => {
     localStorage.setItem('language', lang);
     
-    // Update all elements with data-en and data-th attributes (including those inside <a> tags)
-    document.querySelectorAll('[data-en][data-th]').forEach(el => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) {
-        el.textContent = text;
+    // Update elements with data-th attribute
+    // English text is already in HTML, only Thai needs data-th
+    document.querySelectorAll('[data-th]').forEach(el => {
+      const thText = el.getAttribute('data-th');
+      if (thText) {
+        if (lang === 'th') {
+          // Store current English text as data-en for restoration
+          el.setAttribute('data-en', el.textContent);
+          el.textContent = thText;
+        } else {
+          // Restore English text
+          const enText = el.getAttribute('data-en');
+          if (enText) {
+            el.textContent = enText;
+          }
+        }
       }
     });
     
     // Update placeholder attributes
-    document.querySelectorAll('[data-en-placeholder][data-th-placeholder]').forEach(el => {
-      el.placeholder = el.getAttribute(`data-${lang}-placeholder`);
+    document.querySelectorAll('[data-th-placeholder]').forEach(el => {
+      if (lang === 'th') {
+        el.setAttribute('data-en-placeholder', el.placeholder);
+        el.placeholder = el.getAttribute('data-th-placeholder');
+      } else {
+        const enPlaceholder = el.getAttribute('data-en-placeholder');
+        if (enPlaceholder) {
+          el.placeholder = enPlaceholder;
+        }
+      }
     });
     
     // Update active language button
@@ -31,9 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update html lang attribute
     document.documentElement.lang = lang;
-    
-    // Console log for debugging
-    console.log(`✅ Language switched to: ${lang}`);
   };
   
   // Initialize with saved language
