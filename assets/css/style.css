@@ -297,7 +297,7 @@ margin-bottom: 10px;
 }
 
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1170px;
+        max-width: 1170px; overflow: hidden;
     }
 
 .btn-icon-search {
@@ -656,7 +656,7 @@ margin-bottom: 10px;
 
 .products-content {
     background: var(--light);
-    border-radius: 50px;
+    border-radius: var(--radius-lg);
     padding: 38px 43px;
 }
 .counter-number {
@@ -994,7 +994,7 @@ margin-bottom: 10px;
 
 .margintopminus{margin-top: -220px;}
 .hero-banner{
-    height:650px;
+    padding: 78px 0px;
     background-image:url("../images/using-home-technology7.jpg");
     background-position:center;
     background-size:cover;
@@ -1432,6 +1432,48 @@ margin-bottom: 10px;
   .gallery-item { height: 180px; }
   .stat-number { font-size: 1.8rem; }
   .about-badge { left: 0; bottom: 10px; }
+
+  :root { 
+  --radius-lg: 30px;
+  }
+  .bor-50 img {
+    border-radius: 30px;
+}
+.products-content {
+    padding: 38px 25px;
+}
+.team-card {
+    padding: 17px;
+}
+a.navbar-brand img {
+    width: 110px;
+}
+.main-navbar, .main-navbar.scrolled {
+    padding: 2px 0;
+
+}
+.margintopminus {
+    margin-top: 45px;
+}
+.top100 {
+    margin-top: 0px;
+}
+.service-card{
+    margin-top: 50px;
+}
+.hero-titleinnter {
+    font-size: 2.5rem;
+}
+.about-section {
+    padding: 64px 0;
+}
+.footer-section {
+    padding-top: 65px;
+}
+.phone {
+    font-size: 21px;
+}
+
 }
 
 @media (max-width: 575.98px) {

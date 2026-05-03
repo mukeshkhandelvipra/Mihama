@@ -2,7 +2,24 @@
 /**
  * Function to generate random string.
  */
-require_once($_SERVER['DOCUMENT_ROOT'] . '/phpmailer/vendor/autoload.php');
+$autoloadPaths = [
+    __DIR__ . '/phpmailer/vendor/autoload.php',
+    __DIR__ . '/../phpmailer/vendor/autoload.php',
+    ($_SERVER['DOCUMENT_ROOT'] ?? __DIR__) . '/phpmailer/vendor/autoload.php',
+];
+
+$autoloadFound = false;
+foreach ($autoloadPaths as $autoload) {
+    if (file_exists($autoload)) {
+        require_once $autoload;
+        $autoloadFound = true;
+        break;
+    }
+}
+
+if (!$autoloadFound) {
+    die('PHPMailer autoload not found. Checked paths: ' . implode(', ', $autoloadPaths));
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -17,51 +34,53 @@ function xss_clean($string) {
 }
 
 function sendEmail($to,$subject,$message,$reply_to=null,$cc=null,$bcc=null,$from = null){
-	
-	
     $mail = new PHPMailer(true);
-	
-	    //Server settings
-	    $mail->SMTPDebug = 0;
-	     // $mail->isSMTP();
-	    $mail->CharSet  = 'UTF-8';
 
-	    $mail->Host = 'mail.smtp2go.com';
-	    $mail->SMTPAuth = true;
-	    $mail->Username = 'mvmwebsite';
-	    $mail->Password = 'NsFMKkDqDeHf3UK4';
-	    $mail->SMTPSecure = 'tls';
-	    $mail->Port = 587;  
-	    $mail->SMTPOptions = array(
-	    'tls' => array(
-	        'verify_peer' => false,
-	        'verify_peer_name' => false,
-	        'allow_self_signed' => true
-	    )
-	);
+    //Server settings
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->CharSet  = 'UTF-8';
+    $mail->Host = 'mail.smtp2go.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'mvmwebsite';
+    $mail->Password = 'NsFMKkDqDeHf3UK4';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+    $mail->SMTPAutoTLS = true;
+    $mail->SMTPOptions = array(
+        'tls' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
 
-	// $to ='mukeshkhandelvipr@gmail.com';
-	$mail->setFrom('mukeshkhandelvipr@gmail.com', 'Mihama Araya Company');
-	
-	
-	$mail->addAddress($to);
-	if(!empty($bcc)) {
-		$mail->addBcc($bcc);
-	}
-	if(!empty($cc)) {
-		foreach($cc as $v){
-			$mail->AddCC($v); 
-		}
-	}
+     (!empty($from)) {
+       mail->setFrom($from, 'Mihama Araya Company');
+    } else
+        $mailsetFrom('mukeshkhandelvipra@gmail.com','Mihama Araya Company');
+    }
 
-	$mail->isHTML(true);
-	$mail->Subject = $subject;
-	$mail->Body    = $message;
+    if (!empty($reply_to) && filter_var($reply_to, FILTER_VALIDATE_EMAIL)) {
+        $mail->addReplyTo($reply_to, $reply_to);
+    }
 
-	$mail->send();
-	
-	
-return true;
+    $mail->addAddress($to);
+    if(!empty($bcc)) {
+        $mail->addBcc($bcc);
+    }
+    if(!empty($cc)) {
+        foreach($cc as $v){
+            $mail->AddCC($v);
+        }
+    }
+
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+
+    $mail->send();
+    return true;
 }
 
 function sanitizeUrl($url) {

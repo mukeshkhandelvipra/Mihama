@@ -48,19 +48,26 @@
             }
 
             // Choose font
-            $font = '/var/www/vhosts/knight.international/httpdocs/assets/fonts/ARIAL.woff'; // any TTF font
-            if (!file_exists($font)) {
-                die('Font file not found. Please place arial.ttf in the same folder.');
+            $font = __DIR__ . '/assets/fonts/arial.ttf';
+            $useTtf = file_exists($font);
+            if (!$useTtf) {
+                $font = __DIR__ . '/assets/fonts/ARIAL.ttf';
+                $useTtf = file_exists($font);
             }
 
             // Draw CAPTCHA text
             for ($i = 0; $i < strlen($captchaText); $i++) {
-                $angle = rand(-30, 30);
                 $x = 25 + $i * 30 + rand(-3, 3);
-                $y = rand(40, 60);
-                $fontSize = rand(28, 32);
+                $y = rand(30, 55);
                 $textColor = imagecolorallocate($image, rand(0, 90), rand(0, 90), rand(0, 90));
-                imagettftext($image, $fontSize, $angle, $x, $y, $textColor, $font, $captchaText[$i]);
+
+                if ($useTtf) {
+                    $angle = rand(-30, 30);
+                    $fontSize = rand(28, 32);
+                    imagettftext($image, $fontSize, $angle, $x, $y, $textColor, $font, $captchaText[$i]);
+                } else {
+                    imagestring($image, rand(4, 5), $x, $y - 10, $captchaText[$i], $textColor);
+                }
             }
 
             // Add final distortion lines over text
